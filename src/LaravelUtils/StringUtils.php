@@ -34,4 +34,13 @@ class StringUtils
         }
         return 'https://www.youtube.com/embed/' . $youtube_id ;
     }
+
+    public static function stringToAcronym($string){
+        $words = explode(" ", $string);
+        $acronym = "";
+        foreach ($words as $w) {
+            $acronym .= $w[0];
+        }
+        return $acronym;
+    }
 }
